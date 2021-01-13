@@ -1336,17 +1336,7 @@ function renderKazan(kazan, name) {
 
 }
 
-// if(body.classList.contains('uzbek')) {
-//     renderKazan(kazanUzbek, 'kazanUzbek')  
-//     renderFurnace(furnaceUzbek, 'furnaceUzbek')
-//     renderReadySet(ready_setsUzbek, 'ready_setsUzbek')
-// } 
-// if(body.classList.contains('afgan')) {
-//     renderKazan(kazanAfgan, 'kazanAfgan')  
-//     renderFurnace(furnaceAfgan, 'furnaceAfgan')
-//     renderReadySet(ready_setsAfgan, 'ready_setsAfgan')    
-// }
-// renderAccessories ()
+
 
 function renderFurnace(furnace, name) {
     
@@ -2072,42 +2062,132 @@ furnaceNav.onclick=function(e){
   containerFurnace.querySelector(`.furnace__item_${item}`).style.display = "flex";
   
 }
-
-
-
-$(document).ready(function () {
-    $(".sub_category__items.owl-carousel").owlCarousel({
-        margin: 7,
-        responsiveClass: true,
-        nav: false,
-        items: 1,
-        dots: true,
-        slideTransition: 'linear',
-        responsive: {
-            0: {
-                stagePadding: 8,
-            },
-            340: {
-                stagePadding: 15,
-            },
-            370: {
-                stagePadding: 33,
-            },
-            400: {
-                stagePadding: 45,
-            },
-            435: {
-                stagePadding: 65,
-            },
-            490: {
-                stagePadding: 95,
-            },
-            540: {
-                stagePadding: 115,
-            },
-        }
+let isScrollCatalog = true;
+let isScrollReviews = true;
+function render() {
+    if(body.classList.contains('uzbek')) {
+    renderKazan(kazanUzbek, 'kazanUzbek')  
+    renderFurnace(furnaceUzbek, 'furnaceUzbek')
+    renderReadySet(ready_setsUzbek, 'ready_setsUzbek')  
+    }
+    if(body.classList.contains('afgan')) {
+        renderKazan(kazanAfgan, 'kazanAfgan')  
+        renderFurnace(furnaceAfgan, 'furnaceAfgan')
+        renderReadySet(ready_setsAfgan, 'ready_setsAfgan')    
+    }
+    renderAccessories ()  
+    $(document).ready(function () {
+        $(".sub_category__items.owl-carousel").owlCarousel({
+            margin: 7,
+            responsiveClass: true,
+            nav: false,
+            items: 1,
+            dots: true,
+            slideTransition: 'linear',
+            responsive: {
+                0: {
+                    stagePadding: 8,
+                },
+                340: {
+                    stagePadding: 15,
+                },
+                370: {
+                    stagePadding: 33,
+                },
+                400: {
+                    stagePadding: 45,
+                },
+                435: {
+                    stagePadding: 65,
+                },
+                490: {
+                    stagePadding: 95,
+                },
+                540: {
+                    stagePadding: 115,
+                },
+            }
+        });
     });
-});
+    $('.catalog_furnace__item--images').slick(furnaceSlider());
+    $('.img_bg__item').slick(imgItemSlider());   
+    $(document).ready(function () {
+        $(".catalog_furnace__items.owl-carousel").owlCarousel({
+            responsiveClass: true,
+            nav: false,
+            items: 1,
+            dots: false,
+            slideTransition: 'linear',
+        });
+    
+    });
+    $(document).ready(function () {
+        $(".ready_set__items.owl-carousel").owlCarousel({
+            margin: 7,
+            responsiveClass: true,
+            nav: false,
+            items: 1,
+            dots: false,
+            slideTransition: 'linear',
+        });
+    
+    });
+    
+    
+    $(document).ready(function () {
+        $(".accessories_catalog__items.owl-carousel").owlCarousel({
+            margin: 7,
+            responsiveClass: true,
+            dotsEach: true,
+            slideTransition: 'linear',
+            responsive: {
+                0: {
+                    items: 1,
+                    autoWidth: true,
+                    dots: false,
+                },
+                500: {
+                    items: 2,
+                    autoWidth: true,
+                },
+                800: {
+                    nav: false,
+                    dots: false,
+                },
+                900: {
+                    items: 3,
+                    nav: true,
+                    dots: true,
+                },
+                1200: {
+                    items: 4,
+                    nav: true,
+                    dots: true,
+                },
+            }
+        });
+    
+    });  
+}
+function renderReviewYandex() {
+    let container = document.querySelector('.review_left')
+    container.innerHTML = `
+    <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/105833180518?comments"></iframe>
+    <a href="https://yandex.by/maps/org/kazan_bel/105833180518/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0">
+    </a>
+    `
+}
+$(window).scroll(function(){
+    if($(window).scrollTop() > 2500 && isScrollCatalog ) {
+        isScrollCatalog = false 
+        render()      
+    }
+    if($(window).scrollTop() > 6500 && isScrollReviews ) {
+        isScrollReviews = false 
+        renderReviewYandex()      
+    }
+})
+
 
 
 function furnaceSlider() {
@@ -2122,7 +2202,7 @@ function furnaceSlider() {
         cssEase: 'linear'      
     }
 }
-$('.catalog_furnace__item--images').slick(furnaceSlider());
+// $('.catalog_furnace__item--images').slick(furnaceSlider());
 
 function quizSlider() {
     return {
@@ -2148,65 +2228,65 @@ function imgItemSlider() {
         cssEase: 'linear'  
     }
 }
-$('.img_bg__item').slick(imgItemSlider());    
+// $('.img_bg__item').slick(imgItemSlider());    
 
-$(document).ready(function () {
-    $(".catalog_furnace__items.owl-carousel").owlCarousel({
-        responsiveClass: true,
-        nav: false,
-        items: 1,
-        dots: false,
-        slideTransition: 'linear',
-    });
+// $(document).ready(function () {
+//     $(".catalog_furnace__items.owl-carousel").owlCarousel({
+//         responsiveClass: true,
+//         nav: false,
+//         items: 1,
+//         dots: false,
+//         slideTransition: 'linear',
+//     });
 
-});
-$(document).ready(function () {
-    $(".ready_set__items.owl-carousel").owlCarousel({
-        margin: 7,
-        responsiveClass: true,
-        nav: false,
-        items: 1,
-        dots: false,
-        slideTransition: 'linear',
-    });
+// });
+// $(document).ready(function () {
+//     $(".ready_set__items.owl-carousel").owlCarousel({
+//         margin: 7,
+//         responsiveClass: true,
+//         nav: false,
+//         items: 1,
+//         dots: false,
+//         slideTransition: 'linear',
+//     });
 
-});
+// });
 
 
-$(document).ready(function () {
-    $(".accessories_catalog__items.owl-carousel").owlCarousel({
-        margin: 7,
-        responsiveClass: true,
-        dotsEach: true,
-        slideTransition: 'linear',
-        responsive: {
-            0: {
-                items: 1,
-                autoWidth: true,
-                dots: false,
-            },
-            500: {
-                items: 2,
-                autoWidth: true,
-            },
-            800: {
-                nav: false,
-                dots: false,
-            },
-            900: {
-                items: 3,
-                nav: true,
-                dots: true,
-            },
-            1200: {
-                items: 4,
-                nav: true,
-                dots: true,
-            },
-        }
-    });
+// $(document).ready(function () {
+//     $(".accessories_catalog__items.owl-carousel").owlCarousel({
+//         margin: 7,
+//         responsiveClass: true,
+//         dotsEach: true,
+//         slideTransition: 'linear',
+//         responsive: {
+//             0: {
+//                 items: 1,
+//                 autoWidth: true,
+//                 dots: false,
+//             },
+//             500: {
+//                 items: 2,
+//                 autoWidth: true,
+//             },
+//             800: {
+//                 nav: false,
+//                 dots: false,
+//             },
+//             900: {
+//                 items: 3,
+//                 nav: true,
+//                 dots: true,
+//             },
+//             1200: {
+//                 items: 4,
+//                 nav: true,
+//                 dots: true,
+//             },
+//         }
+//     });
 
-});
+// });
 
 setOwlCarousel('.our_advantages__items', 1200)
 setOwlCarousel('.credit_cards', 1200)
