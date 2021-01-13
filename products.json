@@ -1,0 +1,4183 @@
+/* Важно!
+Названия переменных и свойств не менять
+Обязательно двойные ковычки
+После каждой строчки следует запятая
+*/
+
+
+
+//узбекские казаны
+kazanUzbek = [
+    {   
+        "title": "Для небольшой компании или семьи",
+        "titleImg": "img/icons/family-icon.svg",
+        "person": "До 5 персон",
+        "products": [
+            {
+                "id": "1",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+        ]
+
+    },
+    {   
+        "title": "Для большой компании или семьи",
+        "titleImg": "img/icons/big-family-icon.svg",
+        "person": "От 5 до 11 персон",
+        "products": [
+            {
+                "id": "5",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+        ]
+
+    },
+    {   
+        "title": "Экстра большие казаны",
+        "titleImg": "img/icons/extra-kazan-icon.svg",
+        "person": "От 22 до 225 см.",
+        "products": [
+            {
+                "id": "9",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+            {
+                "id": "10",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "11",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "12",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "13",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+            {
+                "id": "14",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "15",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": false,
+            },
+            {
+                "id": "16",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "bottom": "Плоское",
+                "d": "28 см",
+                "deep": "10 см",
+                "tWall": "6 мм",
+                "weight": "3.6 кг.",
+                "cap": "Алюминиевая",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+        ]
+
+    },
+];
+//афганские казаны
+kazanAfgan = [
+    {   
+        "title": "Полированные",
+        "titleImg": "img/icons/polirovanie.png",
+        "person": "Рекомендуем для дома",
+        "products": [
+            {
+                "id": "1",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },           
+             {
+                "id": "3",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },           
+             {
+                "id": "4",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+        ]
+
+    },
+    {   
+        "title": "Для большой компании или семьи",
+        "titleImg": "img/icons/nepolirovanie.png",
+        "person": "Рекомендуем для дачи и природы",
+        "products": [
+            {
+                "id": "5",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            
+            {
+                "id": "6",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            
+            {
+                "id": "7",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            
+            {
+                "id": "8",
+                "name": "Казан 4.5 л.",
+                "size": "4.5",
+                "for": "Для готовки на 1-2 человек",
+                "img": [
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                    "img/goods_img/cart_test.jpg",
+                ],
+                "material": "Алюминий",
+                "d": "28 см",
+                "height": "20 см",
+                "weight": "3.6 кг.",
+                "value": "3.5 л.",
+                "price": "81",
+                "discountPrice": "70",
+                "hit": true,
+            },
+            
+        ]
+
+    },
+];
+
+furnaceUzbek = [
+    {
+        "id": 1,
+        "title": "Печь стандарт",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Стандартная версия",
+            "imgIcon": "img/furnace/furnace_icon/1.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 2,
+        "title": "Печь c дверцей",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с дверцей",
+            "imgIcon": "img/furnace/furnace_icon/2.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 3,
+        "title": "Печь c трубой",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с трубой",
+            "imgIcon": "img/furnace/furnace_icon/3.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 4,
+        "title": "Печь c зольником",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с зольником",
+            "imgIcon": "img/furnace/furnace_icon/4.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": false,
+    },
+    {
+        "id": 5,
+        "title": "VIP печь",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "VIP версия",
+            "imgIcon": "img/furnace/furnace_icon/5.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 6,
+        "title": "Мангал 3в1",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                { 
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Мангал 3в1",
+            "imgIcon": "img/furnace/furnace_icon/6.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+];
+
+furnaceAfgan = [
+    {
+        "id": 1,
+        "title": "Печь стандарт",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Стандартная версия",
+            "imgIcon": "img/furnace/furnace_icon/1.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 2,
+        "title": "Печь c дверцей",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с дверцей",
+            "imgIcon": "img/furnace/furnace_icon/2.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 3,
+        "title": "Печь c трубой",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с трубой",
+            "imgIcon": "img/furnace/furnace_icon/3.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 4,
+        "title": "Печь c зольником",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Версия с зольником",
+            "imgIcon": "img/furnace/furnace_icon/4.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": false,
+    },
+    {
+        "id": 5,
+        "title": "VIP печь",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                {
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "VIP версия",
+            "imgIcon": "img/furnace/furnace_icon/5.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+    {
+        "id": 6,
+        "title": "Мангал 3в1",
+        "img": [
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+            "img/furnace/kazan.png",
+        ],
+        "weight": "6 мм.",
+        "forKazan": "от 6 до 225 л.",
+        "material": "Сталь",
+        "size": [
+                { 
+                    "size": "8 литров",
+                    "price": "301",
+                    "discountPrice": "250",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "12 литров",
+                    "price": "401",
+                    "discountPrice": "350",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+                {
+                    "size": "16 литров",
+                    "price": "501",
+                    "discountPrice": "450",
+                    "sizeImg": "img/furnace/size_standart.png"
+                },
+        ],
+        "differences": {
+            "title": "Мангал 3в1",
+            "imgIcon": "img/furnace/furnace_icon/6.png",
+            "descr": "В печи нету дымохода, зольника и дверцы, это базовая версия, которая подойдет, вы не часто выезжаете на природу и печью будет пользоваться редко"
+        },
+        "hit": true,
+    },
+];
+
+ready_setsUzbek = [
+    {
+        "id": 1,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 300,
+        "setPrice": 250,
+        "hit": true
+    },
+    {
+        "id": 2,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 500,
+        "setPrice": 350,
+        "hit": true
+    },
+    {
+        "id": 3,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 400,
+        "setPrice": 300,
+        "hit": false
+    },
+    {
+        "id": 4,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 300,
+        "setPrice": 250,
+        "hit": true
+    },
+];
+
+ready_setsAfgan = [
+    {
+        "id": 1,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 300,
+        "setPrice": 250,
+        "hit": true
+    },
+    {
+        "id": 2,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 500,
+        "setPrice": 350,
+        "hit": true
+    },
+    {
+        "id": 3,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 400,
+        "setPrice": 300,
+        "hit": false
+    },
+    {
+        "id": 4,
+        "title": "Казан 6 литров + печь",
+        "img": [
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+            "img/goods_img/ready_set.png",
+        ],
+        "prompt": {
+            "d_kazan": "31 см",
+            "material": "Чугун",
+            "weight_kazan": "9 мм",
+            "cap": "Аллюминиевая",
+            "d_furnace": "280 мм",
+            "weight_furnace": "3 мм",            
+        },
+        "singlePrice": 300,
+        "setPrice": 250,
+        "hit": true
+    },
+];
+
+accessories = [
+    {   
+        "title": "Дополнительно к казану",
+        "titleImg": "img/icons/add-for-kazan-icon.png",
+        "products": [
+            {
+                "id": "1",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "5",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+           
+            
+        ]
+
+    },
+
+    {   
+        "title": "Шумовки и половники",
+        "titleImg": "img/icons/shumovki-icon.png",
+        "products": [
+            {
+                "id": "1",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "5",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+           
+            
+        ]
+
+    },
+    {   
+        "title": "Посуда",
+        "titleImg": "img/icons/plates-icon.png",
+        "products": [
+            {
+                "id": "1",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "5",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+           
+            
+        ]
+
+    },
+    {   
+        "title": "Ножи пчаки",
+        "titleImg": "img/icons/knifes-icon.png",
+        "products": [
+            {
+                "id": "1",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "5",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+           
+            
+        ]
+
+    },
+    {   
+        "title": "Для гриля",
+        "titleImg": "img/icons/for-grill-icon.png",
+        "products": [
+            {
+                "id": "1",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "2",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "3",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "4",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "5",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "6",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/cart_test.jpg",
+                            "img/goods_img/cart_test.jpg",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+            {
+                "id": "7",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": "img/goods_img/",
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": true,
+            },
+            {
+                "id": "8",
+                "name": "Крышка- сковородка",
+                "params": [
+                    {
+                        "title": "Толщина металла",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Глубина",
+                        "index": "6 мм."
+                    },
+                    {
+                        "title": "Диаметр",
+                        "index": "6 мм."
+                    },
+
+                ],
+                "size": [
+                    {
+                        "size": "Без казана",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "6 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "8 литров",
+                        "price": "301",
+                        "discountPrice": "250",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "12 литров",
+                        "price": "401",
+                        "discountPrice": "350",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                    {
+                        "size": "16 литров",
+                        "price": "501",
+                        "discountPrice": "450",
+                        "img": [
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                            "img/goods_img/plate_test.png",
+                        ],
+                    },
+                ],
+                "useful": {
+                    "title": "Чем пригодиться?",
+                    "descr": "Упростит жизнь в готовке, особенно на природе, можно не возить с собой отдельную сковородку, что всегда будет плюсом"
+                },
+                "hit": false,
+            },
+           
+            
+        ]
+
+    },
+
+    
+]
