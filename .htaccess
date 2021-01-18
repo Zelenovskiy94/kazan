@@ -26,6 +26,7 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
  ExpiresByType image/jpeg "access plus 7 days"
  ExpiresByType image/png "access plus 7 days"
  ExpiresByType image/gif "access plus 7 days"
+ ExpiresByType image/webp "access plus 7 days"
  ExpiresByType application/x-shockwave-flash "access plus 7 days"
  #кэшировать css, javascript и текстовые файлы на одну неделю
  ExpiresByType text/css "access plus 7 days"
