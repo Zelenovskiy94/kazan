@@ -15,7 +15,11 @@ let monthArr = [
 let year = new Date().getFullYear()//получение года
 let month = new Date().getMonth()//получение месяца(0 - 11)
 let days = new Date(year, month + 1, 0).getDate()//получение кол-ва дней в месяце
-document.querySelector('.discount_date_p span').textContent = days + ' ' + monthArr[month]//вывод
+let discount_date = document.querySelector('.discount_date_p span')
+if(discount_date) {
+  discount_date.textContent = days + ' ' + monthArr[month]//вывод  
+}
+
 
 let body = document.querySelector('body');
 const containerFurnace = document.querySelector('.catalog_furnace__items')
@@ -71,14 +75,15 @@ function showModalQuiz(modal) {
         isInit = true
         setTimeout(function(){
         $('.quiz_left').slick(quizSlider());
-        $(".quiz_accessories_elems.owl-carousel").owlCarousel({
-            margin: 15,
-            nav: true,
-            items: 4,
-            dots: false,
-            mouseDrag: false,
-            autoWidth: true
-        });
+        // Карусель квиза на аксессуары. Удалено
+        // $(".quiz_accessories_elems.owl-carousel").owlCarousel({
+        //     margin: 15,
+        //     nav: true,
+        //     items: 4,
+        //     dots: false,
+        //     mouseDrag: false,
+        //     autoWidth: true
+        // });
             
         },200)
 
@@ -388,10 +393,12 @@ function isDisabletNextBtn() {
     console.log(indexSlick, btnIndex)
     if(indexSlick < btnIndex) {
         btn.disabled = false //включает кнопку Далее, если ответ уже дан
-    } else if(indexSlick == 4) {
-        btn.disabled = false // кнопка Далее включена при выборе аксесуаров
-        indexResolve += 1
-    } else {
+    } 
+    // else if(indexSlick == 4) {
+    //     btn.disabled = false // кнопка Далее включена при выборе аксесуаров
+    //     indexResolve += 1
+    // } 
+    else {
         btn.disabled = true//выключает кнопку Далее
     }
     
@@ -541,6 +548,7 @@ $('.btn_menu ').click(function () {
     $('.black_bg').addClass('active')
 })
 $('.btn_to_cart ').click(function () {
+    
     $('.cart').toggleClass('active')
     $('.cart_discount').addClass('active')
     $('.black_bg').addClass('active')
@@ -595,10 +603,13 @@ function sentPhone(e, fromForm) {
                 type: 'POST',
                 data: data,
                 success: function(){
-                    $('.modal_btn__thanks').modal({
-                        // fadeDuration: 300,
-                        // fadeDelay: 0.50
-                    });
+                    showModalExtraKazan('.modal_extra_oneclick', '', phonePerson)
+                    // if(fromPage == 'Узбекские казаны') {
+                    //     window.location.href = 'thanksUzbek.html'
+                    // }
+                    // if(fromPage == 'Афганские казаны') {
+                    //     window.location.href = 'thanksAfgan.html'
+                    // }
                 },
                 error: function(err){
                     alert('Ошибка сервера. Сообщение не отправлено');
@@ -661,10 +672,13 @@ function orderCart(e, fromForm) {
                 type: 'POST',
                 data: data,
                 success: function(){
-                    $('.modal_btn__thanks').modal({
-                        // fadeDuration: 300,
-                        // fadeDelay: 0.50
-                    });
+                    if(fromPage == 'Узбекские казаны') {
+                        window.location.href = 'thanksUzbek.html'
+                    }
+                    if(fromPage == 'Афганские казаны') {
+                        window.location.href = 'thanksAfgan.html'
+                    }
+
                     cartArr = []
                     localStorage.setItem('kazanbelCart', JSON.stringify(cartArr))
                     renderCart()
@@ -706,12 +720,23 @@ function orderOneClickExtra(e, fromForm) {
         data+=`&fromForm=${fromForm}`
         data+=`&person_phone=${phonePerson}`
         data+=`&fromPage=${fromPage}`
-        let arrExtra = $(e).find('input[name=extra_furnace[]]').val();
+        let arrExtra = e.querySelectorAll(`.extra_item input`);
+
+        let extraitems = ''
+        for(let i = 0; i < arrExtra.length; i++) {
+            if(arrExtra[i].checked) {
+                extraitems += `
+                ${arrExtra[i].value};
+                `    
+            }
+            
+        } 
+  
         _rc('send', 'order', {
             'orderMethod': '',
             'phone': phonePerson,
             'customTransactionId': url('?transaction_id'),
-            'customerComment': fromPage + ' __ ' + fromForm 
+            'customerComment': fromPage + ' __ ' + fromForm + ' __ ' + extraitems
             
         });
         $.ajax({
@@ -719,10 +744,12 @@ function orderOneClickExtra(e, fromForm) {
             type: 'POST',
             data: data,
             success: function(){
-                $('.modal_btn__thanks').modal({
-                    // fadeDuration: 300,
-                    // fadeDelay: 0.50
-                });
+                if(fromPage == 'Узбекские казаны') {
+                    window.location.href = 'thanksUzbek.html'
+                }
+                if(fromPage == 'Афганские казаны') {
+                    window.location.href = 'thanksAfgan.html'
+                }
             },
             error: function(err){
                 alert('Ошибка сервера. Сообщение не отправлено');
@@ -977,7 +1004,7 @@ function sentQuiz(e, fromForm,fromPage) {
                 2. На какое количество персон вы будете готовить? -- ${$(e).find('input[name=person_quiz]').val()};                                           
                 3. Вы планируете готовить? -- ${$(e).find('input[name=cook_quiz]').val()};                                              
                 4. У вас есть печь или мангал для казана? -- ${$(e).find('input[name=quiz_furnace]').val()};                                           
-                5. Какие аксессуары со скидкой в 10% вы бы приобрели? -- ${$(e).find('input[name=quiz_accessories]').val()};                                           
+                5. Вы хотите купить аксессуары со скидкой в 10%? -- ${$(e).find('input[name=accessories_quiz]').val()};                                           
                 6. Какой бюджет у вас на покупку казана? -- ${$(e).find('input[name=quiz_budget]').val()};                                          
                 7. Вам нужна доставка казана? -- ${$(e).find('input[name=quiz_delivery]').val()};                                          
                 8. Как с Вами связаться? -- ${$(e).find('input[name=quiz_messenger]').val()};                                           
@@ -990,10 +1017,13 @@ function sentQuiz(e, fromForm,fromPage) {
                 type: 'POST',
                 data: data,
                 success: function(){
-                    $('.modal_btn__thanks').modal({
-                        // fadeDuration: 300,
-                        // fadeDelay: 0.50
-                    });
+                    showModalExtraKazan('.modal_extra_oneclick', '', phonePerson)
+                    // if(fromPage == 'Узбекские казаны') {
+                    //     window.location.href = 'thanksUzbek.html'
+                    // }
+                    // if(fromPage == 'Афганские казаны') {
+                    //     window.location.href = 'thanksAfgan.html'
+                    // }
                     isQuiz = true
                     localStorage.setItem('kazanbelQuiz', JSON.stringify(isQuiz))
                 },
@@ -1253,8 +1283,8 @@ function renderKazan(kazan, name) {
                 let images = ''
                 for(let [item, elem] of kazan[i].products[j].img.entries()) {
                     images += `<div class="img_bg__item--elem">
-                    <img src="${elem}" alt="kazan">
-                    <button class="btn_loop" onclick="showModal('.btn_product_image', '${elem}')"></button>  
+                    <a data-fancybox="gallery_${j}_${item}" href="${elem}"><img src="${elem}" alt="kazan"></a>
+                    
                     </div>`
                 }
             let categoryItems2 = `
@@ -1324,6 +1354,7 @@ function renderKazan(kazan, name) {
                         </button>
                         <i>+</i>  
                     </div>
+                    
                 </div>
             </div> 
             `
@@ -1350,8 +1381,9 @@ function renderFurnace(furnace, name) {
             
             `
             let images = ''
-            for(let imagesItem of elem.img) {
-                images += `<div class="catalog_furnace__item--images__elem"><img src="${imagesItem}" alt="${elem.title}"><div></div></div>`
+            for(let [i,imagesItem] of elem.img.entries()) {
+                images += `
+                <a href="${imagesItem}" data-fancybox="gallery_furnace_${item}" class="catalog_furnace__item--images__elem"><img src="${imagesItem}" alt="${elem.title}"><div></div></a>`
             }
             let b = `
             </div>
@@ -1385,8 +1417,8 @@ function renderFurnace(furnace, name) {
                                         <span>${elem.material}</span>
                                     </li>
                                 </ul>
+                            </div>
                         </div>
-                    </div>
                 </div> 
 
                 <div class="catalog_furnace__item--descr">
@@ -1482,9 +1514,9 @@ function renderReadySet (ready_sets, name) {
             let images = ''
             for(let [i, src] of elem.img.entries()) {
                 images += `<div class="img_bg__item--elem">
-                <img src="${src}" alt="kazan">
-                <div></div>
-                <button class="btn_loop" onclick="showModal('.btn_product_image', '${src}')"></button>  
+                <a data-fancybox="gallery_readyset_${item}" href="${src}"><img src="${src}" alt="kazan"></a>
+                
+                
                 </div>`
             }
             let elem2 = ` 
@@ -1588,9 +1620,7 @@ function renderAccessories () {
                 let images = ''
                 for(let [it, src] of elem.size[0].img.entries()) {
                     images += `<div class="img_bg__item--elem">
-                    <img src="${src}" alt="accessories">
-                    <div></div>
-                    <button class="btn_loop" onclick="showModal('.btn_product_image', '${src}')"></button>  
+                    <a data-fancybox="gallery_accessories_${i}_${elem.id}_${item}_0" href="${src}"><img src="${src}" alt="accessories"></a>
                     </div>`
                 }
 
@@ -1706,15 +1736,17 @@ function showModalExtraKazan(modal, data) {
     $('.extra_next').click(function(){
         $(modal + ' form>.slick-next').trigger('click')
     })
-    $( '.close_modal_slick').click(function(e){
+    $( '.modal_extra_oneclick .close_modal_slick').click(function(e){
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
         $('.extra_img_block').slick('unslick');  
         setTimeout(function() {
-            $('.modal_btn__thanks').modal({
-                // fadeDuration: 300,
-                // fadeDelay: 0.50
-            });
+            if(fromPage == 'Узбекские казаны') {
+                window.location.href = 'thanksUzbek.html'
+            }
+            if(fromPage == 'Афганские казаны') {
+                window.location.href = 'thanksAfgan.html'
+            }
         }, 500)
     })
     // $(document).mouseup(function (e) {
@@ -1726,6 +1758,7 @@ function showModalExtraKazan(modal, data) {
     //     }
     // });
 }
+
 
 function showModalExtraAccessories(modal) {
     const container = document.querySelector(modal + ' form');
@@ -1760,30 +1793,34 @@ function showModalExtraAccessories(modal) {
     $('.extra_next').click(function(){
         $(modal + ' form>.slick-next').trigger('click')
     })
-    $( '.close_modal_slick').click(function(e){
+    $( '.modal_extra_oneclick .close_modal_slick').click(function(e){
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
         $('.extra_img_block').slick('unslick');  
         setTimeout(function() {
-            $('.modal_btn__thanks').modal({
-                // fadeDuration: 300,
-                // fadeDelay: 0.50
-            });
+            if(fromPage == 'Узбекские казаны') {
+                window.location.href = 'thanksUzbek.html'
+            }
+            if(fromPage == 'Афганские казаны') {
+                window.location.href = 'thanksAfgan.html'
+            }
         }, 500)
 
     })
-    $(document).mouseup(function (e) {
-        var div = $(modal);
-        if (!div.is(e.target) 
-            && div.has(e.target).length === 0) { 
-            $('.modal_extra_oneclick form').slick('unslick');
-            $('.extra_img_block').slick('unslick');  
-            $('.modal_btn__thanks').modal({
-                // fadeDuration: 300,
-                // fadeDelay: 0.50
-            });
-        }
-    });
+    // $(document).mouseup(function (e) {
+    //     var div = $(modal);
+    //     if (!div.is(e.target) 
+    //         && div.has(e.target).length === 0) { 
+    //         $('.modal_extra_oneclick form').slick('unslick');
+    //         $('.extra_img_block').slick('unslick');  
+    //         if(fromPage == 'Узбекские казаны') {
+    //             window.location.href = 'thanksUzbek.html'
+    //         }
+    //         if(fromPage == 'Афганские казаны') {
+    //             window.location.href = 'thanksAfgan.html'
+    //         }
+    //     }
+    // });
 }
 
 function showModalExtraFurnace(modal) {
@@ -1815,15 +1852,17 @@ function showModalExtraFurnace(modal) {
     $('.extra_next').click(function(){
         $(modal + ' form>.slick-next').trigger('click')
     })
-    $( '.close_modal_slick').click(function(e){
+    $( '.modal_extra_oneclick .close_modal_slick').click(function(e){
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
         $('.extra_img_block').slick('unslick');  
         setTimeout(function() {
-            $('.modal_btn__thanks').modal({
-                // fadeDuration: 300,
-                // fadeDelay: 0.50
-            });
+            if(fromPage == 'Узбекские казаны') {
+                window.location.href = 'thanksUzbek.html'
+            }
+            if(fromPage == 'Афганские казаны') {
+                window.location.href = 'thanksAfgan.html'
+            }
         }, 500)
     })
     // $(document).mouseup(function (e) {
@@ -2034,8 +2073,7 @@ function updateSizeAccessories(e, contItems, contItem) {
     let images = ''
     for(let src of accessories[contItems].products[contItem].size[e.value].img) {
        images +=  `<div class="img_bg__item--elem">
-       <img src="${src}" alt="accessories">
-       <button class="btn_loop" onclick="showModal('.btn_product_image', '${src}')"></button>  
+       <a data-fancybox="gallery_accessories_${accessories[contItems].products[contItem].id}_${e.value}" href="${src}"><img src="${src}" alt="accessories"></a>
        </div>`
     }
     console.log(images)
@@ -2047,21 +2085,23 @@ function updateSizeAccessories(e, contItems, contItem) {
 }
 
 const furnaceNav = document.querySelector('.nav_catalog_furnace');
-furnaceNav.onclick=function(e){
-  for(let i = 0;i<furnaceNav.children.length;i++){
-    furnaceNav.children[i].classList.remove('active');
-  }
-  $('.catalog_furnace__item--images').slick('unslick');
-  $('.catalog_furnace__item--images').slick(furnaceSlider());
-  e.target.classList.add('active');
-  let item = e.target.getAttribute('furnace-item')
-  let fornaceItems = containerFurnace.querySelectorAll('.catalog_furnace__item')
-  for(let i = 0; i < fornaceItems.length; i++){
-    fornaceItems[i].style.display ="none"
-  }
-  containerFurnace.querySelector(`.furnace__item_${item}`).style.display = "flex";
-  
+if(furnaceNav) {
+    furnaceNav.onclick=function(e){
+    for(let i = 0;i<furnaceNav.children.length;i++){
+        furnaceNav.children[i].classList.remove('active');
+    }
+    $('.catalog_furnace__item--images').slick('unslick');
+    $('.catalog_furnace__item--images').slick(furnaceSlider());
+    e.target.classList.add('active');
+    let item = e.target.getAttribute('furnace-item')
+    let fornaceItems = containerFurnace.querySelectorAll('.catalog_furnace__item')
+    for(let i = 0; i < fornaceItems.length; i++){
+        fornaceItems[i].style.display ="none"
+    }
+    containerFurnace.querySelector(`.furnace__item_${item}`).style.display = "flex";
+    }    
 }
+
 let isScrollCatalog = true;
 let isScrollReviews = true;
 function render() {
@@ -2076,41 +2116,42 @@ function render() {
         renderReadySet(ready_setsAfgan, 'ready_setsAfgan')    
     }
     renderAccessories ()  
-    $(document).ready(function () {
-        $(".sub_category__items.owl-carousel").owlCarousel({
-            margin: 7,
-            responsiveClass: true,
-            nav: false,
-            items: 1,
-            dots: true,
-            slideTransition: 'linear',
-            responsive: {
-                0: {
-                    stagePadding: 8,
-                },
-                340: {
-                    stagePadding: 15,
-                },
-                370: {
-                    stagePadding: 33,
-                },
-                400: {
-                    stagePadding: 45,
-                },
-                435: {
-                    stagePadding: 65,
-                },
-                490: {
-                    stagePadding: 95,
-                },
-                540: {
-                    stagePadding: 115,
-                },
-            }
-        });
-    });
+    // $(document).ready(function () {
+    //     $(".sub_category__items.owl-carousel").owlCarousel({
+    //         margin: 7,
+    //         responsiveClass: true,
+    //         nav: false,
+    //         items: 1,
+    //         dots: true,
+    //         slideTransition: 'linear',
+    //         responsive: {
+    //             0: {
+    //                 stagePadding: 8,
+    //             },
+    //             340: {
+    //                 stagePadding: 15,
+    //             },
+    //             370: {
+    //                 stagePadding: 33,
+    //             },
+    //             400: {
+    //                 stagePadding: 45,
+    //             },
+    //             435: {
+    //                 stagePadding: 65,
+    //             },
+    //             490: {
+    //                 stagePadding: 95,
+    //             },
+    //             540: {
+    //                 stagePadding: 115,
+    //             },
+    //         }
+    //     });
+    // });
     $('.catalog_furnace__item--images').slick(furnaceSlider());
-    $('.img_bg__item').slick(imgItemSlider());   
+    $('.img_bg__item').slick(imgItemSlider());  
+
     $(document).ready(function () {
         $(".catalog_furnace__items.owl-carousel").owlCarousel({
             responsiveClass: true,
@@ -2119,7 +2160,7 @@ function render() {
             dots: false,
             slideTransition: 'linear',
         });
-    
+
     });
     $(document).ready(function () {
         $(".ready_set__items.owl-carousel").owlCarousel({
@@ -2132,42 +2173,49 @@ function render() {
         });
     
     });
+    if (window.innerWidth < 600) {
+        let arr = document.querySelectorAll('.catalog_furnace__item')
+        console.log(arr)
+        for(let elem of arr) {
+            let i = elem.querySelector('.btn-b')
+            i.textContent = 'купить в 1 клик'
+        }
+    }
     
+    // $(document).ready(function () {
+    //     $(".accessories_catalog__items.owl-carousel").owlCarousel({
+    //         margin: 7,
+    //         responsiveClass: true,
+    //         dotsEach: true,
+    //         slideTransition: 'linear',
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //                 autoWidth: true,
+    //                 dots: false,
+    //             },
+    //             500: {
+    //                 items: 2,
+    //                 autoWidth: true,
+    //             },
+    //             800: {
+    //                 nav: false,
+    //                 dots: false,
+    //             },
+    //             900: {
+    //                 items: 3,
+    //                 nav: true,
+    //                 dots: true,
+    //             },
+    //             1200: {
+    //                 items: 4,
+    //                 nav: true,
+    //                 dots: true,
+    //             },
+    //         }
+    //     });
     
-    $(document).ready(function () {
-        $(".accessories_catalog__items.owl-carousel").owlCarousel({
-            margin: 7,
-            responsiveClass: true,
-            dotsEach: true,
-            slideTransition: 'linear',
-            responsive: {
-                0: {
-                    items: 1,
-                    autoWidth: true,
-                    dots: false,
-                },
-                500: {
-                    items: 2,
-                    autoWidth: true,
-                },
-                800: {
-                    nav: false,
-                    dots: false,
-                },
-                900: {
-                    items: 3,
-                    nav: true,
-                    dots: true,
-                },
-                1200: {
-                    items: 4,
-                    nav: true,
-                    dots: true,
-                },
-            }
-        });
-    
-    });  
+    // });  
 }
 function renderReviewYandex() {
     let container = document.querySelector('.review_left')
@@ -2196,9 +2244,7 @@ function furnaceSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        infinite: false,
-        autoplay: true,
-        autoplaySpeed: 2000,  
+        infinite: false, 
         cssEase: 'linear'      
     }
 }
@@ -2290,15 +2336,15 @@ function imgItemSlider() {
 
 setOwlCarousel('.our_advantages__items', 1200)
 setOwlCarousel('.credit_cards', 1200)
-setOwlCarousel('.sub_category__items', 600)
-setOwlCarousel('.catalog_furnace__items', 1000)
-setOwlCarousel('.ready_set__items', 600)
+// setOwlCarousel('.sub_category__items', 600)
+// setOwlCarousel('.catalog_furnace__items', 1000)
+// setOwlCarousel('.ready_set__items', 600)
 
 window.addEventListener('resize', function () {
     setOwlCarousel('.our_advantages__items', 1200)
     setOwlCarousel('.credit_cards', 1200)
-    setOwlCarousel('.sub_category__items', 600)
-    setOwlCarousel('.catalog_furnace__items', 1000)
+    // setOwlCarousel('.sub_category__items', 600)
+    // setOwlCarousel('.catalog_furnace__items', 1000)
     setOwlCarousel('.ready_set__items', 600)
     if (window.innerWidth < 1200) {
         // location.reload()//если изменилась ширина экрана, обновить страницу
@@ -2346,35 +2392,35 @@ function showSelect(e) {
 }
 
 
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [53.874300, 27.559063],
-            zoom: 17,
-            controls: []
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+// ymaps.ready(function () {
+//     var myMap = new ymaps.Map('map', {
+//             center: [53.874300, 27.559063],
+//             zoom: 17,
+//             controls: []
+//         }, {
+//             searchControlProvider: 'yandex#search'
+//         }),
 
-        myPlacemark = new ymaps.Placemark([53.875193, 27.560933], {
-            hintContent: 'Магазин Узбекских а Афганских казанов',
-            balloonContent: 'Казан. Бел'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/icons/map_icon.svg',
-            // Размеры метки.
-            iconImageSize: [73, 78],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-40, -76]
-        });
+//         myPlacemark = new ymaps.Placemark([53.875193, 27.560933], {
+//             hintContent: 'Магазин Узбекских а Афганских казанов',
+//             balloonContent: 'Казан. Бел'
+//         }, {
+//             // Опции.
+//             // Необходимо указать данный тип макета.
+//             iconLayout: 'default#image',
+//             // Своё изображение иконки метки.
+//             iconImageHref: 'img/icons/map_icon.svg',
+//             // Размеры метки.
+//             iconImageSize: [73, 78],
+//             // Смещение левого верхнего угла иконки относительно
+//             // её "ножки" (точки привязки).
+//             iconImageOffset: [-40, -76]
+//         });
 
-    myMap.geoObjects
-        .add(myPlacemark)
-    myMap.behaviors.disable('scrollZoom')
-});
+//     myMap.geoObjects
+//         .add(myPlacemark)
+//     myMap.behaviors.disable('scrollZoom')
+// });
 
 
 
@@ -2491,4 +2537,12 @@ $(document).mouseleave(function(e){
             }); 
         isModalExit = true
     }    
+});
+
+
+    $("[data-fancybox='gallery']").fancybox({
+    loop: true,
+    transitionEffect: "tube",
+    hash: false,
+    backFocus : false,
 });

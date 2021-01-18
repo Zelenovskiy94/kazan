@@ -33,7 +33,8 @@ if($_POST){
                         <p style="font-size: 18px">На какое колличество персон вы будете готовить?____<b>'.$_POST['person_quiz'].'</b></p>                                           
                         <p style="font-size: 18px">Вы планируете готовить?____<b>'.$_POST['cook_quiz'].'</b></p>                                           
                         <p style="font-size: 18px">У вас есть печь или мангал для казана?____<b>'.$_POST['quiz_furnace'].'</b></p>                                           
-                        <p style="font-size: 18px">Какие аксессуары со скидкой в 10% вы бы приобрели?____<b>'.implode(", ", $_POST['quiz_accessories']).'</b></p>                                          
+                                                  
+                        <p style="font-size: 18px">Вы хотите купить аксессуары со скидкой в 10%??____<b>'.$_POST['accessories_quiz'].'</b></p>                                          
                         <p style="font-size: 18px">Какой бюджет у вас на покупку казана?____<b>'.$_POST['quiz_budget'].'</b></p>                                          
                         <p style="font-size: 18px">Вам нужна доставка казана?____<b>'.$_POST['quiz_delivery'].'</b></p>                                          
                         <p style="font-size: 18px">Как с Вами связаться?____<b>'.$_POST['quiz_messenger'].'</b></p>                                          
@@ -42,6 +43,7 @@ if($_POST){
                 </html>';
 
         $mail->send();
+        //<p style="font-size: 18px">Какие аксессуары со скидкой в 10% вы бы приобрели?____<b>'.implode(", ", $_POST['quiz_accessories']).'</b></p>
     } catch (Exception $e) {
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
