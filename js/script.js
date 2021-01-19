@@ -2180,42 +2180,52 @@ function render() {
             i.textContent = 'купить в 1 клик'
         }
     }
-    
-    // $(document).ready(function () {
-    //     $(".accessories_catalog__items.owl-carousel").owlCarousel({
-    //         margin: 7,
-    //         responsiveClass: true,
-    //         dotsEach: true,
-    //         slideTransition: 'linear',
-    //         responsive: {
-    //             0: {
-    //                 items: 1,
-    //                 autoWidth: true,
-    //                 dots: false,
-    //             },
-    //             500: {
-    //                 items: 2,
-    //                 autoWidth: true,
-    //             },
-    //             800: {
-    //                 nav: false,
-    //                 dots: false,
-    //             },
-    //             900: {
-    //                 items: 3,
-    //                 nav: true,
-    //                 dots: true,
-    //             },
-    //             1200: {
-    //                 items: 4,
-    //                 nav: true,
-    //                 dots: true,
-    //             },
-    //         }
-    //     });
-    
-    // });  
+    if (window.innerWidth > 600) { 
+        $(document).ready(function () {
+            $(".accessories_catalog__items.owl-carousel").owlCarousel({
+                margin: 7,
+                responsiveClass: true,
+                dotsEach: true,
+                slideTransition: 'linear',
+                responsive: {
+                    0: {
+                        items: 1,
+                        autoWidth: true,
+                        dots: false,
+                    },
+                    500: {
+                        items: 2,
+                        autoWidth: true,
+                    },
+                    800: {
+                        nav: false,
+                        dots: false,
+                    },
+                    900: {
+                        items: 3,
+                        nav: true,
+                        dots: true,
+                    },
+                    1200: {
+                        items: 4,
+                        nav: true,
+                        dots: true,
+                    },
+                }
+            });
+        });  
+    }
+    $('[data-fancybox]').fancybox({
+        buttons : [ 
+            'fullScreen',
+            'close'
+          ],
+          thumbs : {
+            autoStart : true
+          }
+    });
 }
+
 function renderReviewYandex() {
     let container = document.querySelector('.review_left')
     container.innerHTML = `
@@ -2297,55 +2307,59 @@ function imgItemSlider() {
 
 // });
 
-if (window.innerWidth > 600) {
-$(document).ready(function () {
-    $(".accessories_catalog__items.owl-carousel").owlCarousel({
-        margin: 7,
-        responsiveClass: true,
-        dotsEach: true,
-        slideTransition: 'linear',
-        responsive: {
-            0: {
-                items: 1,
-                autoWidth: true,
-                dots: false,
-            },
-            500: {
-                items: 2,
-                autoWidth: true,
-            },
-            800: {
-                nav: false,
-                dots: false,
-            },
-            900: {
-                items: 3,
-                nav: true,
-                dots: true,
-            },
-            1200: {
-                items: 4,
-                nav: true,
-                dots: true,
-            },
-        }
-    });
+// if (window.innerWidth > 600) { 
+// $(document).ready(function () {
+//     $(".accessories_catalog__items.owl-carousel").owlCarousel({
+//         margin: 7,
+//         responsiveClass: true,
+//         dotsEach: true,
+//         slideTransition: 'linear',
+//         responsive: {
+//             0: {
+//                 items: 1,
+//                 autoWidth: true,
+//                 dots: false,
+//             },
+//             500: {
+//                 items: 2,
+//                 autoWidth: true,
+//             },
+//             800: {
+//                 nav: false,
+//                 dots: false,
+//             },
+//             900: {
+//                 items: 3,
+//                 nav: true,
+//                 dots: true,
+//             },
+//             1200: {
+//                 items: 4,
+//                 nav: true,
+//                 dots: true,
+//             },
+//         }
+//     });
 
-});    
-}
+// });    
+// }
 
 
 setOwlCarousel('.our_advantages__items', 1200)
 setOwlCarousel('.credit_cards', 1200)
 // setOwlCarousel('.sub_category__items', 600)
-// setOwlCarousel('.catalog_furnace__items', 1000)
+if (window.innerWidth > 600) {
+setOwlCarousel('.catalog_furnace__items', 1000)
+}
 // setOwlCarousel('.ready_set__items', 600)
 
 window.addEventListener('resize', function () {
     setOwlCarousel('.our_advantages__items', 1200)
     setOwlCarousel('.credit_cards', 1200)
     // setOwlCarousel('.sub_category__items', 600)
-    // setOwlCarousel('.catalog_furnace__items', 1000)
+    if (window.innerWidth > 600) {
+        setOwlCarousel('.catalog_furnace__items', 1000)
+        }
     setOwlCarousel('.ready_set__items', 600)
     if (window.innerWidth < 1200) {
         // location.reload()//если изменилась ширина экрана, обновить страницу
@@ -2541,9 +2555,4 @@ $(document).mouseleave(function(e){
 });
 
 
-$("[data-fancybox]").fancybox({
-    loop: true,
-    transitionEffect: "tube",
-    hash: false,
-    backFocus : false,
-});
+
