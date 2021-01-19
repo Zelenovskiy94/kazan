@@ -759,7 +759,7 @@
                         <div class="our_quality__danger--right">
                             <h3><b>Осторожно!</b> Низкокачественные подделки на казаны Grand Metall Invest</h3>
                             <p>Нам <b>начали поступать жалобы от клиентов других магазинов,</b> о низкокачественных подделках, которые ржавеют и раскалываються. <br><br>При этом подделки <b>продают по цене оригинальных казанов</b> Grand Metall Invest</p>
-                            <button type="button" class="btn-a">Подробнее о подделках</button>                        
+                            <button type="button" class="btn-a" onclick="showModal('.modal_compare')">Подробнее о подделках</button>                       
                         </div>                        
                     </div>
 
@@ -881,7 +881,26 @@
                 <div class="download_catalog_block">
                     <h3>Скачайте полный каталог казанов и аксессуаров с фото и ценами</h3>
                     <p>В формате PDF</p>
-                    <a href="#" download class="btn-b btn-b-orange">Скачать каталог</a>
+                    <button type="button" class="btn-b btn-b-orange" onclick="showModal('.modal_btn__download')">Скачать каталог</button>
+                </div>
+                <div class="modal modal_call modal_btn__download">
+                    <div>
+                        <form method="POST">
+                            <h2>Заполните форму, чтобы заказать звонок</h2>
+                            <p>В течение 15 минут с вами свяжется наш менеджер</p>
+        
+                            <label for="person_phone">Ваш красивый номер телефона</label>
+                            <div class="input_person__phone">
+                               <input type="text" name="person_phone" id="person_phone" placeholder="+375 (__) ___ - __ - __"> 
+                            </div>
+                            
+                            <button type="submit" class="btn-b btn_b--call" onclick="sentPhone(this, 'Заказ звонка', 'Узбекские казаны')">Заказать звонок</button>
+                        </form>
+                        <div class="modal_call__img">
+                            <div class="name_position"><span class="name_position--name">Лиза</span><span>Менеджер</span></div>
+                        </div>                                    
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -905,7 +924,7 @@
                     <li furnace-item="4"><div class="nav_furnace__img"></div>VIP печь</li>
                     <li furnace-item="5"><div class="nav_furnace__img"></div>Мангал 3в1</li>
                 </ul>
-                <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
+                <!-- <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p> -->
                 <div class="catalog_furnace__items">
                     
                 </div>
@@ -962,7 +981,7 @@
                     <p>Шумовка в подарок</p>
                     <p class="price_default">40 руб.</p>
                 </div>
-                <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
+                <!-- <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p> -->
                 <div class="ready_set__items">
                 </div> 
             </div>
@@ -1037,12 +1056,12 @@
                                 <p class="rating">Рейтинг 5.0 | 15 отзывов</p>
                                 <a href="" target="_blank">Читать отзывы на Deal</a>
                             </div>
-                            <div class="kufar_review">
+                            <!-- <div class="kufar_review">
                                 <picture><source srcset="img/logos/kufar_logo.webp" type="image/webp"><picture><source srcset="img/logos/kufar_logo.webp" type="image/webp"><picture><source srcset="img/logos/kufar_logo.webp" type="image/webp"><img src="img/logos/kufar_logo.png" alt="kufar_logo"></picture></picture></picture>
                                 <span class="stars"></span>
                                 <p class="rating">Рейтинг 5.0 | 15 отзывов</p>
                                 <a href="" target="_blank">Читать отзывы на Kufar</a>
-                            </div>                            
+                            </div>                             -->
                         </div>
 
                     </div>

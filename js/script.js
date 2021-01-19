@@ -1270,7 +1270,7 @@ function renderKazan(kazan, name) {
                 <div class="sub_category--img" style="background: url(${kazan[i].titleImg}) center center no-repeat, #ff8653;"></div>
                 <h3>${kazan[i].title}<span> ${kazan[i].person}</span></h3>
             </div>
-            <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
+            
             <div class="sub_category__items">
         `
         let categoryItems = ``;
@@ -1283,7 +1283,7 @@ function renderKazan(kazan, name) {
                 let images = ''
                 for(let [item, elem] of kazan[i].products[j].img.entries()) {
                     images += `<div class="img_bg__item--elem">
-                    <a data-fancybox="gallery_${j}_${item}" href="${elem}"><img src="${elem}" alt="kazan"></a>
+                    <a data-fancybox="gallery_${kazan[i].products[j].id}_${j}" href="${elem}"><img src="${elem}" alt="kazan"></a>
                     
                     </div>`
                 }
@@ -1607,7 +1607,6 @@ function renderAccessories () {
             <div class="sub_category--img" style="background: url(${el.titleImg}) center center no-repeat, #ff8653;"></div>
             <h3>${el.title}</h3>
         </div>
-        <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
         <div class="accessories_catalog__items owl-carousel accessories_catalog__items_${i}">
         `
         let catalogItem = ''
@@ -1964,7 +1963,7 @@ function renderExtraAccessories (modal, isEnd) {
     <div class="extra_block">
         <h3>Дополнительные аксессуары?</h3>
         <p class="extra_discount"><i></i>При заказе печь + казан + аксессуар,<br>доставка в подарок</b></p>
-        <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
+        // <p class="swipe_slider">Листайте карточки, чтобы смотреть другие размеры</p>
         <div class="extra_items_block">
         `
         let extraAccessories2 = '' 
@@ -2162,17 +2161,17 @@ function render() {
         });
 
     });
-    $(document).ready(function () {
-        $(".ready_set__items.owl-carousel").owlCarousel({
-            margin: 7,
-            responsiveClass: true,
-            nav: false,
-            items: 1,
-            dots: false,
-            slideTransition: 'linear',
-        });
+    // $(document).ready(function () {
+    //     $(".ready_set__items.owl-carousel").owlCarousel({
+    //         margin: 7,
+    //         responsiveClass: true,
+    //         nav: false,
+    //         items: 1,
+    //         dots: false,
+    //         slideTransition: 'linear',
+    //     });
     
-    });
+    // });
     if (window.innerWidth < 600) {
         let arr = document.querySelectorAll('.catalog_furnace__item')
         console.log(arr)
@@ -2298,41 +2297,43 @@ function imgItemSlider() {
 
 // });
 
+if (window.innerWidth > 600) {
+$(document).ready(function () {
+    $(".accessories_catalog__items.owl-carousel").owlCarousel({
+        margin: 7,
+        responsiveClass: true,
+        dotsEach: true,
+        slideTransition: 'linear',
+        responsive: {
+            0: {
+                items: 1,
+                autoWidth: true,
+                dots: false,
+            },
+            500: {
+                items: 2,
+                autoWidth: true,
+            },
+            800: {
+                nav: false,
+                dots: false,
+            },
+            900: {
+                items: 3,
+                nav: true,
+                dots: true,
+            },
+            1200: {
+                items: 4,
+                nav: true,
+                dots: true,
+            },
+        }
+    });
 
-// $(document).ready(function () {
-//     $(".accessories_catalog__items.owl-carousel").owlCarousel({
-//         margin: 7,
-//         responsiveClass: true,
-//         dotsEach: true,
-//         slideTransition: 'linear',
-//         responsive: {
-//             0: {
-//                 items: 1,
-//                 autoWidth: true,
-//                 dots: false,
-//             },
-//             500: {
-//                 items: 2,
-//                 autoWidth: true,
-//             },
-//             800: {
-//                 nav: false,
-//                 dots: false,
-//             },
-//             900: {
-//                 items: 3,
-//                 nav: true,
-//                 dots: true,
-//             },
-//             1200: {
-//                 items: 4,
-//                 nav: true,
-//                 dots: true,
-//             },
-//         }
-//     });
+});    
+}
 
-// });
 
 setOwlCarousel('.our_advantages__items', 1200)
 setOwlCarousel('.credit_cards', 1200)
@@ -2540,7 +2541,7 @@ $(document).mouseleave(function(e){
 });
 
 
-    $("[data-fancybox='gallery']").fancybox({
+$("[data-fancybox]").fancybox({
     loop: true,
     transitionEffect: "tube",
     hash: false,
