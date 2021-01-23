@@ -24,7 +24,7 @@ if($_POST){
         $mail->Port = 465;                                  
 
         $mail->setFrom('maksim1233@mail.ru', 'kazanbel');
-        $mail->addAddress('maksim.zelenovskiy@gmail.com', 'kazanbel'); 
+        $mail->addAddress('night___life@mail.ru', 'kazanbel'); 
 
         $mail->isHTML(true);                         
         $mail->Subject = $_POST['fromForm'];

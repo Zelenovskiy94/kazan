@@ -1259,14 +1259,25 @@ function minusCount(e) {
 
 
 const catalogCategory = document.querySelector(".catalog_category")
+const discountKazanUzbek = document.querySelector(".discount_kazan__uzbek")
+const discountKazanAfgan = document.querySelector(".discount_kazan__afgan")
 
-function renderKazan(kazan, name) {
-    catalogCategory.innerHTML = "";
+function renderKazan(kazan, name, isDiscount) {
+    if(isDiscount) {
+        if(name == 'kazanUzbek') {
+            discountKazanUzbek.innerHTML = ''
+        } else {
+            discountKazanAfgan.innerHTML = ''
+        }
+    } else {
+        catalogCategory.innerHTML = "";
+    }
+    
 
     for (let i = 0; i < kazan.length; i++) {
         let sub_category = `
         <div class="sub_category">
-            <div class="sub_category--head ${isAfgan ? 'afgan' : ''}">
+            <div class="sub_category--head ${isAfgan || name == 'kazanAfgan' ? 'afgan' : ''}">
                 <div class="sub_category--img" style="background: url(${kazan[i].titleImg}) center center no-repeat, #ff8653;"></div>
                 <h3>${kazan[i].title}<span> ${kazan[i].person}</span></h3>
             </div>
@@ -1293,7 +1304,7 @@ function renderKazan(kazan, name) {
                 <h3 class="sub_category__item--title">${kazan[i].products[j].name}</h3>
                 <span class="sub_category__item--preson">${kazan[i].products[j].for}</span>
                 <ul class="sub_category__item__params">
-                    ${isAfgan ? `
+                    ${isAfgan || name == 'kazanAfgan' ? `
                     <li>
                         <span class="params_bottom">Материал</span>
                         <span>${kazan[i].products[j].material}</span>
@@ -1360,8 +1371,16 @@ function renderKazan(kazan, name) {
             `
             categoryItems += categoryItems1 + images + categoryItems2
         }  
-        
-        catalogCategory.innerHTML += `${sub_category} ${categoryItems} </div></div>`
+        if(isDiscount) {
+            if(name == 'kazanUzbek') {
+                discountKazanUzbek.innerHTML += `${sub_category} ${categoryItems} </div></div>`
+            } else {
+                discountKazanAfgan.innerHTML += `${sub_category} ${categoryItems} </div></div>`
+            }
+        } else {
+            catalogCategory.innerHTML += `${sub_category} ${categoryItems} </div></div>`
+        }
+        // catalogCategory.innerHTML += `${sub_category} ${categoryItems} </div></div>`
     
     }
 
@@ -1578,9 +1597,13 @@ function renderReadySet (ready_sets, name) {
         containerReadySet.innerHTML += elem1 + images + elem2
     }
 }
-
-function renderAccessories () {
-    containerAccessories.innerHTML = ''
+const discountAccessories = document.querySelector('.discount_accessories')
+function renderAccessories (isDiscount) {
+    if(isDiscount) {
+        discountAccessories.innerHTML = ''
+    } else {
+        containerAccessories.innerHTML = '' 
+    }
     let head =''
     let acc_id = ''
     for(let [i, el] of accessories.entries()) {
@@ -1696,7 +1719,12 @@ function renderAccessories () {
             `
         catalogItem += catalogItem1 + images + afterImage + params + catalogItem2 + sizes + catalogItem3    
         }
-      containerAccessories.innerHTML  += head + catalogItem + '</div>'
+        if(isDiscount) {
+            discountAccessories.innerHTML  += head + catalogItem + '</div>'
+        } else {
+            containerAccessories.innerHTML  += head + catalogItem + '</div>'
+        }
+      
     }
     
 }
@@ -1725,7 +1753,7 @@ function showModalExtraKazan(modal, data) {
             items: 4,
             dots: false,
         });
-    
+        $('.extra_block').css('opacity', '1')
       },200)
 
     $('.extra_back').click(function(){
@@ -1738,7 +1766,8 @@ function showModalExtraKazan(modal, data) {
     $( '.modal_extra_oneclick .close_modal_slick').click(function(e){
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
-        $('.extra_img_block').slick('unslick');  
+        $('.extra_img_block').slick('unslick'); 
+        $('.extra_block').css('opacity', '0') 
         setTimeout(function() {
             if(fromPage == 'Узбекские казаны') {
                 window.location.href = 'thanksUzbek.html'
@@ -1782,7 +1811,7 @@ function showModalExtraAccessories(modal) {
             items: 4,
             dots: false,
         });
-    
+        $('.extra_block').css('opacity', '1')
       },200)
 
     $('.extra_back').click(function(){
@@ -1796,6 +1825,7 @@ function showModalExtraAccessories(modal) {
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
         $('.extra_img_block').slick('unslick');  
+        $('.extra_block').css('opacity', '0')
         setTimeout(function() {
             if(fromPage == 'Узбекские казаны') {
                 window.location.href = 'thanksUzbek.html'
@@ -1841,7 +1871,7 @@ function showModalExtraFurnace(modal) {
             items: 4,
             dots: false,
         });
-    
+        $('.extra_block').css('opacity', '1')
       },200)
 
     $('.extra_back').click(function(){
@@ -1855,6 +1885,7 @@ function showModalExtraFurnace(modal) {
         e.preventDefault()
         $('.modal_extra_oneclick form').slick('unslick');
         $('.extra_img_block').slick('unslick');  
+        $('.extra_block').css('opacity', '0')
         setTimeout(function() {
             if(fromPage == 'Узбекские казаны') {
                 window.location.href = 'thanksUzbek.html'
@@ -2055,11 +2086,25 @@ function renderExtraAccessories (modal, isEnd) {
 function updateSizeFurnace (e, contItem, name) {
     name = eval(name)
     let mainItem = document.querySelector(`.furnace__item_${contItem}`)
+    let mainDescr = mainItem.querySelector('.furnace__main--descr')
     mainItem.querySelector('.furnace_one_click').setAttribute('size', e.value)
     mainItem.querySelector('.add_to_cart').setAttribute('size', e.value)
     mainItem.querySelector('.price_default span').textContent = name[contItem].size[e.value].price + " руб."
     mainItem.querySelector('.price_discount .price_current').textContent = name[contItem].size[e.value].discountPrice + " руб."
-    mainItem.querySelector('.modal_furnace_size img').setAttribute('src', name[contItem].size[e.value].sizeImg + "")   
+    console.log(document.querySelectorAll(`.modal_furnace_size_${name[contItem].id}`)) 
+    if(mainItem.querySelector(`.modal_furnace_size_${name[contItem].id}`)) {
+        mainItem.querySelector(`.modal_furnace_size_${name[contItem].id} img`).setAttribute('src', name[contItem].size[e.value].sizeImg + "")   
+    } else {
+        document.querySelector(`.modal_furnace_size_${name[contItem].id}`).parentNode.removeChild(document.querySelector(`.modal_furnace_size_${name[contItem].id}`))
+        mainDescr.innerHTML += `
+        <div class="modal modal_furnace_size modal_furnace_size_${name[contItem].id}">
+        <h3>Размер печи</h3>
+        <img src="${name[contItem].size[e.value].sizeImg}" alt="_размеры">
+        </div> `
+    }
+    // mainItem.querySelector(`.modal_furnace_size_${name[contItem].id}`).innerHTML = `<h3>Размер печи</h3>
+    // <img src="${name[contItem].size[e.value].sizeImg}" alt="_размеры">`
+    
 }
 //обновление цены в категории аксесуаров
 function updateSizeAccessories(e, contItems, contItem) {
@@ -2103,6 +2148,14 @@ if(furnaceNav) {
 
 let isScrollCatalog = true;
 let isScrollReviews = true;
+
+if(body.classList.contains('discount_page')) {
+    renderAccessories (true)  
+    renderFurnace(furnaceUzbek, 'furnaceUzbek',true) 
+    setSlidersFancybox ()
+    renderKazan(kazanUzbek, 'kazanUzbek', true) 
+    renderKazan(kazanAfgan, 'kazanAfgan', true) 
+    }
 function render() {
     if(body.classList.contains('uzbek')) {
     renderKazan(kazanUzbek, 'kazanUzbek')  
@@ -2114,7 +2167,10 @@ function render() {
         renderFurnace(furnaceAfgan, 'furnaceAfgan')
         renderReadySet(ready_setsAfgan, 'ready_setsAfgan')    
     }
-    renderAccessories ()  
+    renderAccessories () 
+    setSlidersFancybox () 
+}
+function setSlidersFancybox () {
     // $(document).ready(function () {
     //     $(".sub_category__items.owl-carousel").owlCarousel({
     //         margin: 7,
@@ -2225,7 +2281,6 @@ function render() {
           }
     });
 }
-
 function renderReviewYandex() {
     let container = document.querySelector('.review_left')
     container.innerHTML = `
@@ -2234,7 +2289,8 @@ function renderReviewYandex() {
     </a>
     `
 }
-$(window).scroll(function(){
+if(!body.classList.contains('discount_page')) {
+   $(window).scroll(function(){
     if($(window).scrollTop() > 2500 && isScrollCatalog ) {
         isScrollCatalog = false 
         render()      
@@ -2243,7 +2299,9 @@ $(window).scroll(function(){
         isScrollReviews = false 
         renderReviewYandex()      
     }
-})
+    }) 
+}
+
 
 
 
@@ -2487,7 +2545,7 @@ if(isAfgan) {
     scrollParallax = -1600
 }
 
-if(window.innerWidth > 1200 ) {
+if(window.innerWidth > 1200 && !body.classList.contains('discount_page') ) {
     $(window).scroll(function(){
         if($(window).scrollTop() > 800) {
             $('.parallax_terminal').bgscroll({
