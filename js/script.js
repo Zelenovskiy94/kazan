@@ -1000,15 +1000,15 @@ function sentQuiz(e, fromForm,fromPage) {
                 'phone': $(e).find('input[name=person_phone_quiz]').val(),
                 'customTransactionId': url('?transaction_id'),
                 'customerComment': fromPage + ' __ ' + fromForm + ' __ ' + `
-                1. Какой казан вас интересует? -- ${$(e).find('input[name=kazan_quiz]').val()};                                          
-                2. На какое количество персон вы будете готовить? -- ${$(e).find('input[name=person_quiz]').val()};                                           
-                3. Вы планируете готовить? -- ${$(e).find('input[name=cook_quiz]').val()};                                              
-                4. У вас есть печь или мангал для казана? -- ${$(e).find('input[name=quiz_furnace]').val()};                                           
-                5. Вы хотите купить аксессуары со скидкой в 10%? -- ${$(e).find('input[name=accessories_quiz]').val()};                                           
-                6. Какой бюджет у вас на покупку казана? -- ${$(e).find('input[name=quiz_budget]').val()};                                          
-                7. Вам нужна доставка казана? -- ${$(e).find('input[name=quiz_delivery]').val()};                                          
-                8. Как с Вами связаться? -- ${$(e).find('input[name=quiz_messenger]').val()};                                           
-                9. Телефон -- ${$(e).find('input[name=person_phone_quiz]').val()};     
+                1.  ${$(e).find('input[name=kazan_quiz]').val()};                                          
+                2.  ${$(e).find('input[name=person_quiz]').val()};                                           
+                3.  ${$(e).find('input[name=cook_quiz]').val()};                                              
+                4.  ${$(e).find('input[name=quiz_furnace]').val()};                                           
+                5.  ${$(e).find('input[name=accessories_quiz]').val()};                                           
+                6.  ${$(e).find('input[name=quiz_budget]').val()};                                          
+                7.  ${$(e).find('input[name=quiz_delivery]').val()};                                          
+                8.  ${$(e).find('input[name=quiz_messenger]').val()};                                           
+                9.  ${$(e).find('input[name=person_phone_quiz]').val()};     
                 `
                 
             });
@@ -1290,6 +1290,7 @@ function renderKazan(kazan, name, isDiscount) {
             <div class="sub_category__item sub_category__kazan">
             ${kazan[i].products[j].hit ? '<span class="hit">Хит</span>' : ''}
                 <div class="img_bg__item">
+                ${name == 'kazanAfgan' && kazan[i].products[j].imgPrev ? '<div class="imgPrev"><img src="'+ kazan[i].products[j].imgPrev +'"></div>' : ''}
                 `
                 let images = ''
                 for(let [item, elem] of kazan[i].products[j].img.entries()) {
@@ -1302,7 +1303,8 @@ function renderKazan(kazan, name, isDiscount) {
                       
                 </div>
                 <h3 class="sub_category__item--title">${kazan[i].products[j].name}</h3>
-                <span class="sub_category__item--preson">${kazan[i].products[j].for}</span>
+                ${kazan[i].title != 'Экстра большие казаны' && name != 'kazanAfgan' ? '<span class="sub_category__item--preson">' + kazan[i].products[j].for + '</span>' : ''}
+                
                 <ul class="sub_category__item__params">
                     ${isAfgan || name == 'kazanAfgan' ? `
                     <li>
@@ -1318,7 +1320,7 @@ function renderKazan(kazan, name, isDiscount) {
                         <span>${kazan[i].products[j].height}</span>
                     </li>  
                     <li>
-                        <span class="params_weight">Вес</span>
+                        ${kazan[i].products[j].name == 'Казан 20 л.' || kazan[i].products[j].name == 'Казан 30 л.' ? '<span class="params_tWall">Толщина стенок</span>' : '<span class="params_weight">Вес</span>'}
                         <span>${kazan[i].products[j].weight}</span>
                     </li>   
                     <li>
@@ -1597,6 +1599,8 @@ function renderReadySet (ready_sets, name) {
         containerReadySet.innerHTML += elem1 + images + elem2
     }
 }
+let hideAccessory = []
+
 const discountAccessories = document.querySelector('.discount_accessories')
 function renderAccessories (isDiscount) {
     if(isDiscount) {
@@ -1607,7 +1611,6 @@ function renderAccessories (isDiscount) {
     let head =''
     let acc_id = ''
     for(let [i, el] of accessories.entries()) {
-        console.log(el, i)
         switch(i) {
             case 0:
             acc_id = 'acc_for_kazan'
@@ -1629,13 +1632,18 @@ function renderAccessories (isDiscount) {
         <div class="sub_category--head" id="${acc_id}">
             <div class="sub_category--img" style="background: url(${el.titleImg}) center center no-repeat, #ff8653;"></div>
             <h3>${el.title}</h3>
+            ${ el.title == 'Ножи пчаки' ? '<p class="actuality_color">На сайте представлены не все расцветки,<br>актуальные уточняйте у менеджера</p>' : '' }
+            
         </div>
         <div class="accessories_catalog__items owl-carousel accessories_catalog__items_${i}">
         `
         let catalogItem = ''
         for(let [item, elem] of el.products.entries()) {
+            if( hideAccessory.indexOf(+elem.id) !== -1) {
+                continue
+            } else {
             catalogItem1 = `
-            <div class="sub_category__item accessories_catalog__item accessories_catalog__item_${item} category_item">
+            <div class="sub_category__item accessories_catalog__item accessories_catalog__item_${item} category_item acc_id_${elem.id}">
                 ${elem.hit ? '<span class="hit">Хит</span>' : ''}
                 <div class="img_bg__item">
                 `
@@ -1666,10 +1674,33 @@ function renderAccessories (isDiscount) {
                         <ul class="sub_category__item__params">
                 `
                 let params = ''
+                let typeParams = ''
                 for(let [j, param] of elem.params.entries()) {
-                    params += `
+                    switch(param.title) {
+                        case 'Материал':
+                            typeParams = 'params_material'
+                        break
+                        case 'Длина':
+                            typeParams = 'params_length'
+                        break
+                        case 'Диаметр':
+                            typeParams = 'params_d'
+                        break
+                        case 'Толщина металла':
+                            typeParams = 'params_weight'
+                        break
+                        case 'Глубина':
+                            typeParams = 'params_deep'
+                        break
+                        default :
+                        typeParams = 'params_weight'
+                        break
+                    }
+                    params += 
+                    
+                    `
                     <li>
-                        <span class="params_weight">${param.title}</span>
+                        <span class="${typeParams}">${param.title}</span>
                         <span>${param.index}</span>
                     </li>                    
                     
@@ -1717,7 +1748,8 @@ function renderAccessories (isDiscount) {
                 </div>
             </div>              
             `
-        catalogItem += catalogItem1 + images + afterImage + params + catalogItem2 + sizes + catalogItem3    
+        catalogItem += catalogItem1 + images + afterImage + params + catalogItem2 + sizes + catalogItem3  
+            }  
         }
         if(isDiscount) {
             discountAccessories.innerHTML  += head + catalogItem + '</div>'
@@ -2158,11 +2190,13 @@ if(body.classList.contains('discount_page')) {
     }
 function render() {
     if(body.classList.contains('uzbek')) {
+    hideAccessory = hideAccessoryUzbek
     renderKazan(kazanUzbek, 'kazanUzbek')  
     renderFurnace(furnaceUzbek, 'furnaceUzbek')
     renderReadySet(ready_setsUzbek, 'ready_setsUzbek')  
     }
     if(body.classList.contains('afgan')) {
+        hideAccessory = hideAccessoryAfgan
         renderKazan(kazanAfgan, 'kazanAfgan')  
         renderFurnace(furnaceAfgan, 'furnaceAfgan')
         renderReadySet(ready_setsAfgan, 'ready_setsAfgan')    
@@ -2170,6 +2204,30 @@ function render() {
     renderAccessories () 
     setSlidersFancybox () 
 }
+// function renderScrollKazan() {
+//     if(body.classList.contains('uzbek')) {
+//         renderKazan(kazanUzbek, 'kazanUzbek') 
+//     }
+//     if(body.classList.contains('afgan')) {
+//         renderKazan(kazanAfgan, 'kazanAfgan')  
+//     }
+// }
+// function renderScrollFurnace() {
+//     if(body.classList.contains('uzbek')) {
+//         renderFurnace(furnaceUzbek, 'furnaceUzbek')
+//     }
+//     if(body.classList.contains('afgan')) {
+//         renderFurnace(furnaceAfgan, 'furnaceAfgan')  
+//     }
+// }
+// function renderScrollReadySet() {
+//     if(body.classList.contains('uzbek')) {
+//         renderReadySet(ready_setsUzbek, 'ready_setsUzbek')  
+//     }
+//     if(body.classList.contains('afgan')) {
+//         renderFurnace(furnaceAfgan, 'furnaceAfgan')  
+//     }
+// }
 function setSlidersFancybox () {
     // $(document).ready(function () {
     //     $(".sub_category__items.owl-carousel").owlCarousel({
@@ -2243,6 +2301,7 @@ function setSlidersFancybox () {
                 responsiveClass: true,
                 dotsEach: true,
                 slideTransition: 'linear',
+                slideBy: 4,
                 responsive: {
                     0: {
                         items: 1,
@@ -2261,11 +2320,13 @@ function setSlidersFancybox () {
                         items: 3,
                         nav: true,
                         dots: true,
+                        slideBy: 2,
                     },
                     1200: {
                         items: 4,
                         nav: true,
                         dots: true,
+                        slideBy: 3,
                     },
                 }
             });
@@ -2289,11 +2350,23 @@ function renderReviewYandex() {
     </a>
     `
 }
+let preloaderEl = document.getElementById('preloader');
 if(!body.classList.contains('discount_page')) {
    $(window).scroll(function(){
+       
     if($(window).scrollTop() > 2500 && isScrollCatalog ) {
         isScrollCatalog = false 
-        render()      
+        preloaderEl.style.opacity = '1'
+        const promise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+            resolve(render()) 
+            }, 300)
+          });
+          
+          promise1.then((value) => {
+            preloaderEl.style.opacity = '0'
+          });
+        // render()      
     }
     if($(window).scrollTop() > 6500 && isScrollReviews ) {
         isScrollReviews = false 
@@ -2338,7 +2411,7 @@ function imgItemSlider() {
         slidesToScroll: 1,
         arrows: true,
         infinite: false,        
-        cssEase: 'linear'  
+        cssEase: 'ease'  
     }
 }
 // $('.img_bg__item').slick(imgItemSlider());    
@@ -2590,15 +2663,15 @@ if(window.innerWidth > 1200 && !body.classList.contains('discount_page') ) {
       })
 }
 
- setTimeout(function(){
-    if(!isQuiz) {
-        $('.quiz_modal').modal({
-            // fadeDuration: 300,
-            // fadeDelay: 0.50,
-            closeExisting: false
-        });
-    } 
-}, 25000)
+//  setTimeout(function(){
+//     if(!isQuiz) {
+//         $('.quiz_modal').modal({
+//             // fadeDuration: 300,
+//             // fadeDelay: 0.50,
+//             closeExisting: false
+//         });
+//     } 
+// }, 25000)
 
 
 $(document).mouseleave(function(e){

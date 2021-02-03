@@ -3,7 +3,8 @@
 Обязательно двойные ковычки
 После каждой строчки следует запятая
 */
-
+hideAccessoryUzbek = [1,3]
+hideAccessoryAfgan = [5,6,7]
 
 
 //узбекские казаны
@@ -367,8 +368,9 @@ kazanAfgan = [
                 "name": "Казан 4.5 л.",
                 "size": "4.5",
                 "for": "Для готовки на 1-2 человек",
+                "imgPrev": "img/goods_img/plate_test.png",
                 "img": [
-                    "img/goods_img/cart_test.jpg",
+                    "img/animation.gif",
                     "img/goods_img/cart_test.jpg",
                     "img/goods_img/cart_test.jpg",
                 ],
@@ -536,7 +538,7 @@ furnaceUzbek = [
         "id": 1,
         "title": "Печь стандарт",
         "img": [
-            "img/furnace/kazan.png",
+            "img/goods_img/furnace_test.png",
             "img/furnace/kazan.png",
             "img/furnace/kazan.png",
             "img/furnace/kazan.png",
@@ -555,7 +557,7 @@ furnaceUzbek = [
                     "size": "12 литров",
                     "price": "401",
                     "discountPrice": "350",
-                    "sizeImg": "img/furnace/size_standart.png"
+                    "sizeImg": "img/furnace/kazan.png"
                 },
                 {
                     "size": "16 литров",
